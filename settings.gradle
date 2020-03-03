@@ -1,2 +1,3 @@
 rootProject.name='Eko Workshop'
 include ':app'
+include ':content_feature'

@@ -6,27 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv_error"
+    <Button
+        android:id="@+id/btn_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="can't download module"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@id/btn_open_content"
-        app:layout_constraintEnd_toEndOf="@id/btn_open_content"
-        app:layout_constraintStart_toStartOf="@id/btn_open_content" />
+        android:text="Button 1"
+        app:layout_constraintBottom_toBottomOf="@id/btn_two"
+        app:layout_constraintEnd_toStartOf="@id/btn_two"
+        app:layout_constraintTop_toTopOf="@id/btn_two" />
 
     <Button
-        android:id="@+id/btn_open_content"
+        android:id="@+id/btn_two"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Open content module"
-        android:visibility="gone"
+        android:text="Button 2"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_three"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button 3"
+        app:layout_constraintBottom_toBottomOf="@id/btn_two"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible" />
+        app:layout_constraintTop_toTopOf="@id/btn_two" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
