@@ -1,0 +1,2 @@
+rootProject.name='Eko Workshop'
+include ':app'
