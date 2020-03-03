@@ -1,4 +1,4 @@
-package com.example.modular.ekoworkshop
+package com.example.modular.content_feature.contentdetail
 
 sealed class ContentSealed
 
