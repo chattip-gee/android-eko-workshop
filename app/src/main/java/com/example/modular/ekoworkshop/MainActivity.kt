@@ -9,6 +9,9 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        /*//Workshop Functional Programming
+        runExampleFP()*/
+
         installModule(CONTENT_DYNAMIC_FEATURE) {
             if (it) {
                 tv_error.visibility = View.GONE
