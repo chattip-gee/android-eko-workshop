@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Eko Workshop</string>
     <string name="title_content_feature">Module Content</string>
+    <string name="title_movie_feature">Movie Title</string>
 </resources>

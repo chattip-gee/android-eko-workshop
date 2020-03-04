@@ -29,4 +29,15 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible" />
 
+    <Button
+        android:id="@+id/btn_open_movie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open movie module"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/btn_open_content"
+        app:layout_constraintStart_toStartOf="@id/btn_open_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_open_content"
+        tools:visibility="visible" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

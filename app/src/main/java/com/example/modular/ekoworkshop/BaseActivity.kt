@@ -11,9 +11,11 @@ import com.google.android.play.core.splitinstall.model.SplitInstallSessionStatus
 
 open class BaseActivity : AppCompatActivity() {
     private val tags = "BaseActivity"
+    val modules = listOf(CONTENT_DYNAMIC_FEATURE, MOVIE_DYNAMIC_FEATURE)
 
     //SplitInstallManager : Responsible for downloading the module.
     private lateinit var splitInstallManager: SplitInstallManager
+
     //SplitInstallRequest: Contain the request information that will be used to request our dynamic feature module from Google Play
     private lateinit var request: SplitInstallRequest
 
@@ -27,13 +29,16 @@ open class BaseActivity : AppCompatActivity() {
         request = SplitInstallRequest
             .newBuilder()
             .addModule(CONTENT_DYNAMIC_FEATURE)
+            .addModule(MOVIE_DYNAMIC_FEATURE)
             .build()
     }
 
-    fun installModule(module: String, isDownloaded: (Boolean) -> Unit) {
-        if (!isDynamicFeatureDownloaded(feature = module)) {
-            downloadFeature { isDownloaded.invoke(it) }
-        } else isDownloaded.invoke(true)
+    fun installModule(module: List<String>, isDownloaded: (Boolean) -> Unit) {
+        module.forEach {
+            if (!isDynamicFeatureDownloaded(feature = it)) {
+                downloadFeature { result -> isDownloaded.invoke(result) }
+            } else isDownloaded.invoke(true)
+        }
     }
 
     private fun isDynamicFeatureDownloaded(feature: String): Boolean =
