@@ -34,8 +34,9 @@ fun runExampleFP() {
     myFunction()
 
     //Higher Order Function
+    getStringFromNetwork({ println(it) })
     getStringFromNetwork { println(it) }
-    getStringFromNetwork(::println)
+    getStringFromNetwork(::myPrint)
 
     //Pure Function
     println("[FP] - Pure Function : " + add(1, 2))
@@ -43,4 +44,8 @@ fun runExampleFP() {
     //Arrow-kt
     println("[FP] - Arrow-kt : " + extractValueByOption("Gee"))
     println("[FP] - Arrow-kt : " + extractValueByEither("EkoApp"))
+}
+
+fun myPrint(value: String) {
+    println(value)
 }
