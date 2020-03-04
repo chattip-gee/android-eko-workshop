@@ -1,73 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/md_grey_900"
-    tools:context=".moviedetail.MovieDetailActivity">
+    android:layout_height="match_parent">
 
-    <View
-        android:id="@+id/view_header"
+    <com.example.modular.movie_feature.moviedetail.viewcustom.MovieDetailComponent
+        android:id="@+id/movie_detail_component"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@color/md_black_1000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Beauty and the Beast"
-        android:textColor="@color/md_white_1000"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/view_header"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/img_thumbnail"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/beautybeast_thumbnail"
-        app:layout_constraintTop_toBottomOf="@id/view_header" />
-
-    <ImageView
-        android:id="@+id/img_poster"
-        android:layout_width="100dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="120dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/beautybeast_poster"
-        app:layout_constraintBottom_toTopOf="@id/tv_description"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/img_thumbnail" />
-
-    <TextView
-        android:id="@+id/tv_description"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="22dp"
-        android:paddingTop="8dp"
-        android:text="A beautiful enchantress disguised as an old beggar woman arrives at a castle during a ball and offers the host, a cruel and selfish prince, a rose in return for shelter from a storm. When he refuses, she reveals her identity. As punishment for the prince's lack of compassion, the enchantress transforms him into a beast and his servants into household objects, then erases the castle, himself and his servants from the memories of their loved ones. She casts a spell on the rose and warns the prince that the spell will only be broken if he learns to love another, and earn their love in return, before the last petal falls, or he will remain a beast forever."
-        android:textColor="@color/md_grey_100"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_poster" />
-
-    <Button
-        android:id="@+id/btn_reserve"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Reserve"
-        app:layout_constraintBottom_toTopOf="@id/tv_description"
-        app:layout_constraintEnd_toEndOf="@id/tv_description"
-        app:layout_constraintTop_toBottomOf="@id/img_thumbnail" />
+        android:layout_height="match_parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
